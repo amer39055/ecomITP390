@@ -1,0 +1,60 @@
+﻿@model ecomITP390.Models.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmpId" class="control-label"></label>
+                <input asp-for="EmpId" class="form-control" />
+                <span asp-validation-for="EmpId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SocialInsuranceId" class="control-label"></label>
+                <input asp-for="SocialInsuranceId" class="form-control" />
+                <span asp-validation-for="SocialInsuranceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Qualfication" class="control-label"></label>
+                <input asp-for="Qualfication" class="form-control" />
+                <span asp-validation-for="Qualfication" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Institute" class="control-label"></label>
+                <input asp-for="Institute" class="form-control" />
+                <span asp-validation-for="Institute" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorityLevel" class="control-label"></label>
+                <select asp-for="AuthorityLevel" class ="form-control" asp-items="ViewBag.AuthorityLevel"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupervisedBy" class="control-label"></label>
+                <select asp-for="SupervisedBy" class ="form-control" asp-items="ViewBag.SupervisedBy"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

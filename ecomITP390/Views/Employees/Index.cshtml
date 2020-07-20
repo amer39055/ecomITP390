@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ecomITP390.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SocialInsuranceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qualfication)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Institute)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorityLevelNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupervisedByNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SocialInsuranceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qualfication)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Institute)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorityLevelNavigation.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupervisedByNavigation.Institute)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmpId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmpId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmpId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
