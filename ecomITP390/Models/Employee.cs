@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ecomITP390.Models
 {
@@ -11,8 +12,9 @@ namespace ecomITP390.Models
             InverseSupervisedByNavigation = new HashSet<Employee>();
             Report = new HashSet<Report>();
         }
-
+        [Key]
         public int EmpId { get; set; }
+
         public int UserId { get; set; }
         public int SocialInsuranceId { get; set; }
         public string Qualfication { get; set; }

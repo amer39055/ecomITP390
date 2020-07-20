@@ -1,0 +1,105 @@
+﻿@model ecomITP390.Models.UserInfo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UserInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fathername)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fathername)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RatePoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RatePoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Homelocation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Homelocation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gov)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gov.GovId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserTypeNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserTypeNavigation.UserTypeId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="NatId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

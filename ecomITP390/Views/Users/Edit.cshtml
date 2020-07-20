@@ -1,0 +1,101 @@
+﻿@model ecomITP390.Models.UserInfo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>UserInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NatId" />
+            <div class="form-group">
+                <label asp-for="Fname" class="control-label"></label>
+                <input asp-for="Fname" class="form-control" />
+                <span asp-validation-for="Fname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fathername" class="control-label"></label>
+                <input asp-for="Fathername" class="form-control" />
+                <span asp-validation-for="Fathername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lname" class="control-label"></label>
+                <input asp-for="Lname" class="form-control" />
+                <span asp-validation-for="Lname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" class="form-control" />
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserType" class="control-label"></label>
+                <select asp-for="UserType" class="form-control" asp-items="ViewBag.UserType"></select>
+                <span asp-validation-for="UserType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RatePoints" class="control-label"></label>
+                <input asp-for="RatePoints" class="form-control" />
+                <span asp-validation-for="RatePoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GovId" class="control-label"></label>
+                <select asp-for="GovId" class="form-control" asp-items="ViewBag.GovId"></select>
+                <span asp-validation-for="GovId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Homelocation" class="control-label"></label>
+                <input asp-for="Homelocation" class="form-control" />
+                <span asp-validation-for="Homelocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Gender" /> @Html.DisplayNameFor(model => model.Gender)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
