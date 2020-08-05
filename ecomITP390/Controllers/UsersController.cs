@@ -47,8 +47,9 @@ namespace ecomITP390.Models
         // GET: Users/Create
         public IActionResult Create()
         {
-            ViewData["GovId"] = new SelectList(_context.Governorate, "GovId", "GovId");
-            ViewData["UserType"] = new SelectList(_context.UserType, "UserTypeId", "UserTypeId");
+            ViewData["GovId"] = new SelectList(_context.Governorate, "GovId", "GovName");
+            ViewData["UserType"] = new SelectList(_context.UserType, "UserTypeId", "Descreption");
+         
             return View();
         }
 
@@ -85,6 +86,7 @@ namespace ecomITP390.Models
             }
             ViewData["GovId"] = new SelectList(_context.Governorate, "GovId", "GovId", userInfo.GovId);
             ViewData["UserType"] = new SelectList(_context.UserType, "UserTypeId", "UserTypeId", userInfo.UserType);
+           
             return View(userInfo);
         }
 

@@ -37,5 +37,11 @@ namespace ecomITP390.Models
         public ICollection<Order> Order { get; set; }
         public ICollection<Report> Report { get; set; }
         public ICollection<Service> Service { get; set; }
+         
+        public string getGender()
+        {
+            return (Gender == true) ? "male" : "Female";
+
+        }
     }
 }

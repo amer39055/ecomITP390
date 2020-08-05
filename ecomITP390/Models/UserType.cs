@@ -9,7 +9,9 @@ namespace ecomITP390.Models
         {
             UserInfo = new HashSet<UserInfo>();
         }
-
+       
+            
+        
         public int UserTypeId { get; set; }
         public string Descreption { get; set; }
 

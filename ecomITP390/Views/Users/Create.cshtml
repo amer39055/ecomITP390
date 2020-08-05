@@ -9,14 +9,10 @@
 <h4>UserInfo</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 pull-right">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NatId" class="control-label"></label>
-                <input asp-for="NatId" class="form-control" />
-                <span asp-validation-for="NatId" class="text-danger"></span>
-            </div>
+        
             <div class="form-group">
                 <label asp-for="Fname" class="control-label"></label>
                 <input asp-for="Fname" class="form-control" />
@@ -81,10 +77,14 @@
                 <span asp-validation-for="Homelocation" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
+                <div class="radio-inline">
                     <label>
                         <input asp-for="Gender" /> @Html.DisplayNameFor(model => model.Gender)
                     </label>
+                    <label  class="control-label">Male</label>
+                    <input asp-for="Gender" value="true" />
+                    <label class="control-label">Female</label>
+                    <input asp-for="Gender" value="false" />
                 </div>
             </div>
             <div class="form-group">
