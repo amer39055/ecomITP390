@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using ecomITP390.Models;
 
-namespace ecomITP390.Models
+namespace ecomITP390.Controllers
 {
     public class EmployeesController : Controller
     {

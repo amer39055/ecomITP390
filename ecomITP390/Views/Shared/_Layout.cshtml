@@ -7,18 +7,20 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-rtl.min.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-rtl.min.css" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-default">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -26,13 +28,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ecomITP390</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                <img src="~/images/icons/hammer-and-wrench_1f6e0.png" alt="Khadamat" class="img-responsive"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">الرئيسية</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">حول المشروع</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">المطورون</a></li>
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a asp-area="" asp-controller="Home" asp-action="register">تسجيل جديد</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="login">تسجيل دخول</a></li>
                 </ul>
             </div>
         </div>
@@ -44,7 +52,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2020 - ecomITP390</p>
+            <p>&copy; 2020 - منصة منافع -الجامعة الافتراضية السورية</p>
         </footer>
     </div>
 
