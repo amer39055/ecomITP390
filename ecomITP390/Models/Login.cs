@@ -13,7 +13,8 @@ namespace ecomITP390.Models
         [Display (Name ="اسم المستخدم")]
         [Required]
         public string Username { get; set; }
-
+        [Display(Name = "كلمة السر")]
+        [Required]
         public string Password { get; set; }
 
         public UserInfo User { get; set; }

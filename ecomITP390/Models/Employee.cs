@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.ComponentModel;
 namespace ecomITP390.Models
 {
     public partial class Employee

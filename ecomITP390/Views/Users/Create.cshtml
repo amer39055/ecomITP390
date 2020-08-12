@@ -81,9 +81,10 @@
                 <span asp-validation-for="Homelocation" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
+                <div class="radio-inline">
                     <label>
-                        <input asp-for="Gender" /> @Html.DisplayNameFor(model => model.Gender)
+                        <input asp-for="Gender==false" /> female
+                        <input asp-for="Gender==true" /> male
                     </label>
                 </div>
             </div>
