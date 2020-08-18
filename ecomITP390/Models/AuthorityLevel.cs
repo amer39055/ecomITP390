@@ -12,6 +12,7 @@ namespace ecomITP390.Models
         }
         
         public int Id { get; set; }
+
         [Display(Name = "مستوى الصلاحية")]
         public string Title { get; set; }
 

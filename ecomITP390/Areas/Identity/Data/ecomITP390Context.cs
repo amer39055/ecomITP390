@@ -14,6 +14,7 @@ namespace ecomITP390.Models
         public ecomITP390Context(DbContextOptions<ecomITP390Context> options)
             : base(options)
         {
+            
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

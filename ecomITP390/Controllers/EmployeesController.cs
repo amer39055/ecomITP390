@@ -45,6 +45,26 @@ namespace ecomITP390.Controllers
 
             return View(employee);
         }
+        //this will return the employee dashboard
+        public async Task<IActionResult> EmployeeDetails(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var employee = await _context.Employee
+                .Include(e => e.AuthorityLevelNavigation)
+                .Include(e => e.SupervisedByNavigation)
+                .Include(e => e.User)
+                .FirstOrDefaultAsync(m => m.EmpId == id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            return View(employee);
+        }
 
         // GET: Employees/Create
         public IActionResult Create()

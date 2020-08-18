@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace ecomITP390.Models
 {
@@ -12,6 +12,7 @@ namespace ecomITP390.Models
         }
 
         public int GovId { get; set; }
+        [Display(Name = "المحافظة")]
         public string GovName { get; set; }
 
         public ICollection<UserInfo> UserInfo { get; set; }
