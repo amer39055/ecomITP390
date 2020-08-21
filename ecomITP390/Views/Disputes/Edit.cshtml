@@ -1,0 +1,61 @@
+﻿@model ecomITP390.Models.Dispute
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Dispute</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Disputid" />
+            <div class="form-group">
+                <label asp-for="OrederId" class="control-label"></label>
+                <select asp-for="OrederId" class="form-control" asp-items="ViewBag.OrederId"></select>
+                <span asp-validation-for="OrederId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArbiterId" class="control-label"></label>
+                <select asp-for="ArbiterId" class="form-control" asp-items="ViewBag.ArbiterId"></select>
+                <span asp-validation-for="ArbiterId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Result" class="control-label"></label>
+                <input asp-for="Result" class="form-control" />
+                <span asp-validation-for="Result" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinishDate" class="control-label"></label>
+                <input asp-for="FinishDate" class="form-control" />
+                <span asp-validation-for="FinishDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimeToFinish" class="control-label"></label>
+                <input asp-for="TimeToFinish" class="form-control" />
+                <span asp-validation-for="TimeToFinish" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

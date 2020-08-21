@@ -29,7 +29,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
-                <img src="~/images/icons/hammer-and-wrench_1f6e0.png" alt="Khadamat" class="img-responsive"></a>
+                <img  id="brand-img" src="~/images/icons/hammer-and-wrench_1f6e0.png" alt="Khadamat" class="img-responsive"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -39,17 +39,16 @@
                     <li><a asp-area="" asp-controller="admins" asp-action="AdminDashBoard">صفحة المدير</a></li>
                     
                 </ul>
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a asp-area="" asp-controller="Home" asp-action="register">تسجيل جديد</a></li>
-                    <li ><a asp-area="" asp-controller="Home" asp-action="login">تسجيل دخول</a></li>
-                </ul>
+             <partial name="_LoginPartial" />
+                
+               
             </div>
         </div>
     </nav>
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    <div class="container container-fluid">
         @RenderBody()
         <hr />
         <footer>

@@ -10,7 +10,7 @@ namespace ecomITP390.Models
         public int Disputid { get; set; }
         [Display(Name = "رقم الطلبية")]
         public int OrederId { get; set; }
-        [Display(Name = "الموظف"] 
+        [Display(Name = "الموظف")] 
         public int ArbiterId { get; set; }
         [Display(Name = "النتيجة")]
         public string Result { get; set; }

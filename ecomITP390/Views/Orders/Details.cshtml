@@ -1,0 +1,72 @@
+﻿@model ecomITP390.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrderStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinishDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinishDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CloseCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CloseCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RatePoint)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RatePoint)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Service)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Service.Desc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Shippment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shippment.ShipmentId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Address)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OrderId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,60 @@
+﻿@model ecomITP390.Models.Dispute
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Dispute</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Result)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Result)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinishDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinishDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeToFinish)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TimeToFinish)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Arbiter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Arbiter.Institute)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Oreder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Oreder.OrderId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Disputid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

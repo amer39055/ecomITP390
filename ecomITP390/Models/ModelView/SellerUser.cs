@@ -8,5 +8,6 @@ namespace ecomITP390.Models.ModelView
     public class SellerUser
     {
 
+
     }
 }
